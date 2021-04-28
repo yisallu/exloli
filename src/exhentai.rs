@@ -357,12 +357,12 @@ impl ExHentai {
         let mut ret = vec![];
         for gallery in gallery_list {
             let title = gallery
-                .xpath_text(r#".//td[@class="gl3c glname"]/a/div/text()"#)?
+                .xpath_text(r#".//td[@class="gl3m glname"]/a/div/text()"#)?
                 .swap_remove(0);
             debug!("标题: {}", title);
 
             let url = gallery
-                .xpath_text(r#".//td[@class="gl3c glname"]/a/@href"#)?
+                .xpath_text(r#".//td[@class="gl3m glname"]/a/@href"#)?
                 .swap_remove(0);
             debug!("地址: {}", url);
 
